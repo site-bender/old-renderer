@@ -1,7 +1,7 @@
 {
-	"name": "@sitebender/components",
+	"name": "@sitebender/renderer",
 	"version": "0.0.1",
-	"description": "Web component JSON-configuration-based UI components library for Sitebender",
+	"description": "Web component JSON-configuration-based UI rendering library for Sitebender",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/ionic-team/stencil-component-starter.git"

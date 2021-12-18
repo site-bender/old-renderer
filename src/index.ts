@@ -1,1 +1,1 @@
-export { Components, JSX } from './components'
+export { SiteBender } from './renderers/SiteBender/index'
