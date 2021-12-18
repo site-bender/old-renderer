@@ -1,8 +1,8 @@
 import { FunctionalComponent, h } from '@stencil/core'
-import getItemPropAttributes from '../../../../../examples/utilities/getItemPropAttributes'
-import getRel from '../../../../../examples/utilities/getRel'
 import injectComponentsIntoContent from '../../../../renderers/utilities/injectComponentsIntoContent'
 import type { InsertionProps } from '../../../../types/props'
+import getItemPropAttributes from '../../../../utilities/getItemPropAttributes'
+import getRel from '../../../../utilities/getRel'
 /*
 	Insertion represents a range of text that has been inserted into a document.
 	This can be used when rendering "track changes" or source code diff

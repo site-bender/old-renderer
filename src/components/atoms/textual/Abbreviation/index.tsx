@@ -1,7 +1,7 @@
 import { FunctionalComponent, h } from '@stencil/core'
-import getItemPropAttributes from '../../../../../examples/utilities/getItemPropAttributes'
-import getRel from '../../../../../examples/utilities/getRel'
 import type { AbbreviationProps } from '../../../../types/props'
+import getItemPropAttributes from '../../../../utilities/getItemPropAttributes'
+import getRel from '../../../../utilities/getRel'
 
 /*
 	Abbreviation represents an abbreviation or acronym; the optional title

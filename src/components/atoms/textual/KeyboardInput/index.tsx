@@ -1,7 +1,7 @@
 import { FunctionalComponent, h } from '@stencil/core'
-import getItemPropAttributes from '../../../../../examples/utilities/getItemPropAttributes'
-import getRel from '../../../../../examples/utilities/getRel'
 import type { KeyboardInputProps } from '../../../../types/props'
+import getItemPropAttributes from '../../../../utilities/getItemPropAttributes'
+import getRel from '../../../../utilities/getRel'
 
 /*
 	KeyboardInput is used to show strings of text meant to be input at the

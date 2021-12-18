@@ -1,8 +1,8 @@
 import { FunctionalComponent, h } from '@stencil/core'
-import getItemPropAttributes from '../../../../../examples/utilities/getItemPropAttributes'
-import getRel from '../../../../../examples/utilities/getRel'
 import injectComponentsIntoContent from '../../../../renderers/utilities/injectComponentsIntoContent'
 import type { QuotationProps } from '../../../../types/props'
+import getItemPropAttributes from '../../../../utilities/getItemPropAttributes'
+import getRel from '../../../../utilities/getRel'
 
 /*
 	Quotation is used to mark inline quotations. Quotation marks are added via CSS

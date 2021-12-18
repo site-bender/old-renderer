@@ -1,7 +1,7 @@
 import { FunctionalComponent, h } from '@stencil/core'
-import getItemPropAttributes from '../../../../../examples/utilities/getItemPropAttributes'
 import injectComponentsIntoContent from '../../../../renderers/utilities/injectComponentsIntoContent'
 import type { ParagraphProps } from '../../../../types/props'
+import getItemPropAttributes from '../../../../utilities/getItemPropAttributes'
 
 /*
 	Paragraph represents a paragraph of text, independent of its styled presentation.

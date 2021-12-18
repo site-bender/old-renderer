@@ -1,0 +1,515 @@
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+	line-height: 1.5rem;
+	margin: 0;
+	font-variant-numeric: diagonal-fractions oldstyle-nums proportional-nums;
+	font-variant-ligatures: common-ligatures;
+	font-variant-caps: normal;
+	font-variant-alternates: normal;
+}
+
+/*
+	Remove list styles on ul, ol elements with a list role,
+	which suggests default styling will be removed
+*/
+ul[role='list'],
+ol[role='list'] {
+	list-style: none;
+	font-variant-numeric: diagonal-fractions oldstyle-nums proportional-nums;
+	font-variant-ligatures: common-ligatures;
+	font-variant-caps: normal;
+	font-variant-alternates: normal;
+}
+
+/* Set core root defaults */
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+	min-height: 100vh;
+	text-rendering: optimizeSpeed;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/*
+	Remove all animations, transitions and smooth scroll
+	for people that prefer not to see them
+*/
+@media (prefers-reduced-motion: reduce) {
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+:root {
+	--measure: 60ch;
+
+	font-size: calc(1rem + 0.3vw);
+	font-family: Verdana, sans-serif;
+
+	--ratio: 1.25;
+	--s-5: calc(var(--s-4) / var(--ratio));
+	--s-4: calc(var(--s-3) / var(--ratio));
+	--s-3: calc(var(--s-2) / var(--ratio));
+	--s-2: calc(var(--s-1) / var(--ratio));
+	--s-1: calc(var(--s0) / var(--ratio));
+	--s0: 1rem;
+	--s1: calc(var(--s0) * var(--ratio));
+	--s2: calc(var(--s1) * var(--ratio));
+	--s3: calc(var(--s2) * var(--ratio));
+	--s4: calc(var(--s3) * var(--ratio));
+	--s5: calc(var(--s4) * var(--ratio));
+
+	--sky: #375e97;
+	--skybright: #698fc9;
+	--skylight: #90bcff;
+	--sunset: #fd7a5c;
+	--sunnier: #ff9780;
+	--sunflower: #ffbb00;
+	--grass: #3f681c;
+	--grassier: #8ad04e;
+
+	--border-thin: var(--s-5);
+	--border-thick: var(--s-2);
+
+	--default-font: Verdana, Arial, sans-serif;
+	--serif: Georgia, Times, serif;
+	--sans-serif: Verdana, Arial, sans-serif;
+	--monospace: Menlo, Monaco, monospace;
+
+	--color-dark: #22262b;
+	--color-light: #ffffff;
+
+	--box-background-color: var(--color-light);
+	--box-border: var(--border-thin);
+	--box-color: var(--color-dark);
+	--box-padding: var(--s1);
+
+	--center-gutter: 0;
+
+	--cluster-align: center;
+	--cluster-gap: 1rem;
+	--cluster-justify: flex-start;
+
+	--cover-inset: 2rem;
+	--cover-min-height: 100vh;
+	--cover-padding: 0;
+
+	--frame-relative-height: 9;
+	--frame-relative-width: 16;
+
+	--grid-cell-width: 100%;
+	--grid-gap: 1rem;
+
+	--sidebar-gutter: var(--s1);
+	--sidebar-min-width: 50%;
+	--sidebar-side-width: 'auto';
+
+	--stack-gap: var(--s0);
+	--stack-split-index: 0;
+
+	--switcher-gap: 0;
+	--switcher-row-limit: 4;
+	--switcher-threshold: 30rem;
+
+	--topper-margin: 0;
+
+	--h1-color: var(--grass);
+	--h1-font-size: var(--s4);
+	--h1-padding: 2.5rem 0 0.5rem;
+
+	--h2-color: var(--grass);
+	--h2-font-size: var(--s3);
+	--h2-padding: 2.5rem 0 0.5rem;
+
+	--h3-color: var(--grass);
+	--h3-font-size: var(--s2);
+	--h3-padding: 1.5rem 0 0;
+
+	--h4-color: var(--grass);
+	--h4-font-size: var(--s1);
+	--h4-padding: 1.5rem 0 0;
+
+	--h5-color: var(--grass);
+	--h5-font-size: var(--s0);
+	--h5-padding: 1.5rem 0 0;
+
+	--h6-color: var(--grass);
+	--h6-font-size: var(--s0);
+	--h6-padding: 1.5rem 0 0;
+
+}
+
+
+/* * {
+	max-width: var(--measure);
+} */
+
+article,
+aside,
+body,
+div,
+footer,
+header,
+html,
+main,
+nav,
+section {
+	max-width: none;
+}
+
+.max-width\:measure {
+	max-width: var(--measure);
+}
+
+.max-width\:measure\/2 {
+	max-width: calc(var(--measure) / 2);
+}
+
+p,
+p * {
+	font-variant-numeric: proportional-nums oldstyle-nums;
+}
+
+p {
+	font-size: 1rem;
+	line-height: 1.5rem;
+	padding: 0;
+	margin: 0 0 1.5rem;
+}
+
+table {
+	font-variant-numeric:stacked-fractions lining-nums tabular-nums slashed-zero;
+	font-variant-ligatures: common-ligatures;
+	font-variant-caps: normal;
+	font-variant-alternates: normal;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	min-height: 100vh;
+	overflow: auto;
+	margin: 2rem;
+}
+
+hr {
+	border: none;
+	border-top: 3px double #333;
+	color: #333;
+	overflow: visible;
+	text-align: center;
+	height: 5px;
+}
+
+hr:after {
+	background: #fff;
+	content: '§';
+	padding: 0 4px;
+	position: relative;
+	top: -13px;
+}
+
+del::before,
+del::after {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+del::before {
+  content: " [begin deletion] ";
+}
+
+del::after {
+  content: " [end deletion] ";
+}
+
+ins {
+	text-decoration: overline;
+}
+
+ins::before,
+ins::after {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+ins::before {
+  content: " [begin insertion] ";
+}
+
+ins::after {
+  content: " [end insertion] ";
+}
+
+.keyboard-input-bender {
+	color: var(--sky);
+}
+
+.key-combo-bender kbd {
+	background-color: hsl(208, 100%, 98%);
+  border-radius: 3px;
+	color: darkslategray;
+	display: inline-block;
+	font-size: 0.7rem;
+	font-weight: bold;
+  padding: 0 4px 0;
+	margin: 0 2px;
+  border: 1px solid hsl(0, 0%, 70%);
+}
+
+mark::before,
+mark::after {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+mark::before {
+  content: " [begin highlight] ";
+}
+
+mark::after {
+  content: " [end highlight] ";
+}
+
+sup, sub {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+}
+
+sub {
+  top: 0.4em;
+	font-style: italic;
+	font-weight: normal;
+}
+
+var.variable-bender {
+	font-family: monospace;
+	font-style: normal;
+	color: brown;
+}
+
+/* field-wrapper-sb > *:first-child > *:first-child {
+	padding: 3rem 0 0;
+}
+
+field-wrapper-sb > *:last-child {
+	margin: 0 0 3rem;
+}
+
+label-sb > label.above,
+label-sb > label.below {
+	display: block;
+}
+
+help-message-sb {
+	color: gray;
+	font-size: 0.8rem;
+	line-height: 2;
+} */
+
+.fine-print-bender {
+	display: block;
+	font-size: calc(1rem / var(--ratio));
+	font-variant-numeric: oldstyle-nums proportional-nums;
+	line-height: 1.5rem;
+	padding: 0;
+	margin: 0 0 1.5rem;
+}
+
+.foreign-term-bender {
+	font-style: italic;
+}
+
+
+.h1-bender {
+	color: var(--h1-color, var(--sunflower));
+	font-family: var(--serif);
+	font-size: var(--h1-font-size, 2.44140625rem);
+	font-weight: normal;
+	margin: 0;
+	padding: var(--h1-padding, 2.5rem 0 0.5rem);
+}
+
+.h2-bender {
+	color: var(--h2-color, var(--sunflower));
+	font-family: var(--serif);
+	font-size: var(--h2-font-size, 1.953125rem);
+	font-weight: normal;
+	margin: 0;
+	padding: var(--h2-padding, 2.5rem 0 0.5rem);
+}
+
+.h3-bender {
+	color: var(--h3-color, var(--sunflower));
+	font-family: var(--serif);
+	font-size: var(--h3-font-size, 1.5625rem);
+	font-weight: normal;
+	margin: 0;
+	padding: var(--h3-padding, 1.5rem 0 0);
+}
+
+.h4-bender {
+	color: var(--h4-color, var(--sunflower));
+	font-family: var(--serif);
+	font-size: var(--h4-font-size, 1.25rem);
+	font-weight: normal;
+	margin: 0;
+	padding: var(--h4-padding, 1.5rem 0 0);
+}
+
+.h5-bender {
+	color: var(--h5-color, var(--sunflower));
+	font-family: var(--sans-serif);
+	font-size: var(--h5-font-size, 1rem);
+	font-weight: normal;
+	margin: 0;
+	padding: var(--h5-padding, 1.5rem 0 0);
+}
+
+.h6-bender {
+	color: var(--h6-color, var(--sunflower));
+	font-family: var(--sans-serif);
+	font-size: var(--h6-font-size, );
+	font-variant-caps: all-small-caps;
+	font-weight: normal;
+	margin: 0;
+	padding: var(--h6-padding, 1.5rem 0 0);
+}
+
+.largest-bender {
+	color: var(--h0-color, var(--sunflower));
+	font-family: var(--serif);
+	font-size: var(--h0-font-size, 3.0517578125rem);
+	font-variant-caps: normal;
+	font-weight: normal;
+	margin: 0 0 0 -0.1em;
+	padding: var(--h0-padding, 2rem 0 1rem);
+}
+
+.larger-bender {
+	color: var(--h1-color, var(--sunflower));
+	font-family: var(--serif);
+	font-size: var(--h1-font-size, 2.44140625rem);
+	font-variant-caps: normal;
+	font-weight: normal;
+	margin: 0 0 0 -0.1em;
+	padding: var(--h1-padding, 2rem 0 1rem);
+}
+
+.large-bender {
+	color: var(--h2-color, var(--sunflower));
+	font-family: var(--serif);
+	font-size: var(--h2-font-size, 1.953125rem);
+	font-variant-caps: normal;
+	font-weight: normal;
+	margin: 0 0 0 -0.1em;
+	padding: var(--h2-padding, 2rem 0 1rem);
+}
+
+.medium-bender {
+	color: var(--h3-color, var(--sunflower));
+	font-family: var(--serif);
+	font-size: var(--h3-font-size, 1.5625rem);
+	font-variant-caps: normal;
+	font-weight: normal;
+	margin: 0 0 0 -0.1em;
+	padding: var(--h3-padding, 1rem 0 0.5rem);
+}
+
+.small-bender {
+	color: var(--h4-color, var(--sunflower));
+	font-family: var(--serif);
+	font-size: var(--h4-font-size, 1.25rem);
+	font-variant-caps: normal;
+	font-weight: normal;
+	margin: 0 0 0 -0.065em;
+	padding: var(--h4-padding, 1rem 0 0.5rem);
+}
+
+.smaller-bender {
+	color: var(--h5-color, var(--sunflower));
+	font-family: var(--sans-serif);
+	font-size: var(--h5-font-size, 1rem);
+	font-variant-caps: normal;
+	font-weight: normal;
+	margin: 0 0 0 -0.05em;
+	padding: var(--h5-padding, 1rem 0 0.5rem);
+}
+
+.smallest-bender {
+	color: var(--h6-color, var(--sunflower));
+	font-family: var(--sans-serif);
+	font-size: var(--h6-font-size, );
+	font-variant-caps: all-small-caps;
+	font-weight: normal;
+	margin: 0 0 0 -0.05em;
+	padding: var(--h6-padding, 0);
+}

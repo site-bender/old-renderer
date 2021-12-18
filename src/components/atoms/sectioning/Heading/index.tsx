@@ -1,8 +1,8 @@
 import { FunctionalComponent, h } from '@stencil/core'
-import getItemPropAttributes from '../../../../../examples/utilities/getItemPropAttributes'
-import getRel from '../../../../../examples/utilities/getRel'
 import injectComponentsIntoContent from '../../../../renderers/utilities/injectComponentsIntoContent'
 import type { HeadingProps } from '../../../../types/props'
+import getItemPropAttributes from '../../../../utilities/getItemPropAttributes'
+import getRel from '../../../../utilities/getRel'
 
 // TODO: Make this only available through sectioning elements
 // and AUTOMATICALLY nested (numerically). Wrap in <header>?

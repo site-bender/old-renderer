@@ -1,8 +1,8 @@
 import { FunctionalComponent, h } from '@stencil/core'
-import getItemPropAttributes from '../../../../../examples/utilities/getItemPropAttributes'
-import getRel from '../../../../../examples/utilities/getRel'
 import injectComponentsIntoContent from '../../../../renderers/utilities/injectComponentsIntoContent'
 import type { DeletionProps } from '../../../../types/props'
+import getItemPropAttributes from '../../../../utilities/getItemPropAttributes'
+import getRel from '../../../../utilities/getRel'
 
 /*
 	Deletion represents a range of text that has been deleted from a document.

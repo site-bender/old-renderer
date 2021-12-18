@@ -1,9 +1,9 @@
 import { FunctionalComponent, h } from '@stencil/core'
-import getItemPropAttributes from '../../../../../examples/utilities/getItemPropAttributes'
-import getLanguage from '../../../../../examples/utilities/getLanguage'
-import getRel from '../../../../../examples/utilities/getRel'
 import injectComponentsIntoContent from '../../../../renderers/utilities/injectComponentsIntoContent'
 import type { ForeignTermProps } from '../../../../types/props'
+import getItemPropAttributes from '../../../../utilities/getItemPropAttributes'
+import getLanguage from '../../../../utilities/getLanguage'
+import getRel from '../../../../utilities/getRel'
 
 /*
 	ForeignTerm is used to mark up foreign words or terms in text. This can

@@ -1,8 +1,8 @@
 import { FunctionalComponent, h } from '@stencil/core'
-import formatDuration from '../../../../../examples/utilities/formatDuration'
-import getItemPropAttributes from '../../../../../examples/utilities/getItemPropAttributes'
-import getRel from '../../../../../examples/utilities/getRel'
 import type { FormattedDateProps } from '../../../../types/props'
+import formatDuration from '../../../../utilities/formatDuration'
+import getItemPropAttributes from '../../../../utilities/getItemPropAttributes'
+import getRel from '../../../../utilities/getRel'
 
 /*
 	FormattedDate takes a date and formats it according to the default format

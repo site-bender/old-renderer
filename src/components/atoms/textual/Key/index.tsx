@@ -1,6 +1,6 @@
 import { FunctionalComponent, h } from '@stencil/core'
-import getItemPropAttributes from '../../../../../examples/utilities/getItemPropAttributes'
 import type { KeyProps } from '../../../../types/props'
+import getItemPropAttributes from '../../../../utilities/getItemPropAttributes'
 
 /*
 	Key is used for an individual key on the keyboard. Used with KeyboardInput.

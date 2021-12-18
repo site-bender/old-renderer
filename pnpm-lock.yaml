@@ -9,6 +9,7 @@ specifiers:
   '@js-temporal/polyfill': ^0.3.0
   '@stencil/core': ^2.12.0
   '@stencil/helmet': ^0.3.2
+  '@stencil/store': ^1.5.0
   '@types/jest': ^27.0.3
   '@typescript-eslint/eslint-plugin': ^5.7.0
   '@typescript-eslint/parser': ^5.7.0
@@ -39,6 +40,7 @@ dependencies:
   '@formatjs/intl-listformat': 6.3.6
   '@formatjs/intl-locale': 2.4.41
   '@js-temporal/polyfill': 0.3.0
+  '@stencil/store': 1.5.0_@stencil+core@2.12.0
   '@xstate/fsm': 1.6.2
   cross-fetch: 3.1.4
   nanoid: 3.1.30
@@ -774,6 +776,14 @@ packages:
   /@stencil/helmet/0.3.2:
     resolution: {integrity: sha512-Ii3jGAJubiXzkKd+sn5VsjFzSFz5IToREsdq3suywM5VYhc4eRfWKfvTswuXghSeWHTHwUErozYYze05Jp7IsA==}
     dev: true
+
+  /@stencil/store/1.5.0_@stencil+core@2.12.0:
+    resolution: {integrity: sha512-fe5fCF6dgVlDM1iLRkkJUyUh0Tfx305asVGgMAJjIs7Q+x/b1pGgTLROm9Ibr53PZuFwr5Kg+4h9p4FLbYqHgA==}
+    peerDependencies:
+      '@stencil/core': '>=1.9.0'
+    dependencies:
+      '@stencil/core': 2.12.0
+    dev: false
 
   /@tootallnate/once/1.1.2:
     resolution: {integrity: sha512-RbzJvlNzmRq5c3O09UipeuXno4tA1FE6ikOjxZK0tuxVv3412l64l5t1W5pj4+rJq9vpkm/kwiR07aZXnsKPxw==}

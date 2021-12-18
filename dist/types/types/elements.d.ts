@@ -1,0 +1,13 @@
+export declare type EmbeddedContent = 'audio' | 'canvas' | 'embed' | 'iframe' | 'img' | 'math' | 'object' | 'picture' | 'svg' | 'video';
+export declare type FlowContent = 'a' | 'abbr' | 'address' | 'article' | 'aside' | 'audio' | 'b' | 'bdi' | 'bdo' | 'blockquote' | 'br' | 'button' | 'canvas' | 'cite' | 'code' | 'command' | 'data' | 'datalist' | 'del' | 'details' | 'dfn' | 'div' | 'dl' | 'em' | 'embed' | 'fieldset' | 'figure' | 'footer' | 'form' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'header' | 'hgroup' | 'hr' | 'i' | 'iframe' | 'img' | 'input' | 'ins' | 'kbd' | 'keygen' | 'label' | 'main' | 'map' | 'mark' | 'math' | 'menu' | 'meter' | 'nav' | 'noscript' | 'object' | 'ol' | 'output' | 'p' | 'picture' | 'pre' | 'progress' | 'q' | 'ruby' | 's' | 'samp' | 'script' | 'section' | 'select' | 'small' | 'span' | 'strong' | 'sub' | 'sup' | 'svg' | 'table' | 'template' | 'textarea' | 'time' | 'u' | 'ul' | 'var' | 'video' | 'wbr' | 'area' | 'link' | 'meta' | 'style';
+export declare type FormAssociatedContent = 'button' | 'fieldset' | 'input' | 'label' | 'meter' | 'object' | 'output' | 'progress' | 'select' | 'textarea';
+export declare type FormLabelableContent = 'button' | 'input' | 'meter' | 'output' | 'progress' | 'select' | 'textarea';
+export declare type FormListedContent = 'button' | 'fieldset' | 'input' | 'object' | 'output' | 'select' | 'textarea';
+export declare type FormResettableContent = 'input' | 'output' | 'select' | 'textarea';
+export declare type FormSubmittableContent = 'button' | 'input' | 'object' | 'select' | 'textarea';
+export declare type HeadingContent = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'hgroup';
+export declare type InteractiveContent = 'a' | 'button' | 'details' | 'embed' | 'iframe' | 'label' | 'select' | 'textarea' | 'audio' | 'img' | 'input' | 'menu' | 'object' | 'video';
+export declare type MetadataContent = 'base' | 'link' | 'meta' | 'noscript' | 'script' | 'style' | 'title';
+export declare type PhrasingContent = 'abbr' | 'audio' | 'b' | 'bdo' | 'br' | 'button' | 'canvas' | 'cite' | 'code' | 'data' | 'datalist' | 'dfn' | 'em' | 'embed' | 'i' | 'iframe' | 'img' | 'input' | 'kbd' | 'label' | 'mark' | 'math' | 'meter' | 'noscript' | 'object' | 'output' | 'picture' | 'progress' | 'q' | 'ruby' | 'samp' | 'script' | 'select' | 'small' | 'span' | 'strong' | 'sub' | 'sup' | 'svg' | 'textarea' | 'time' | 'u' | 'var' | 'video' | 'wbr' | 'a' | 'area' | 'del' | 'ins' | 'link' | 'map' | 'meta';
+export declare type SectioningContent = 'article' | 'aside' | 'nav' | 'section';
+export declare type ScriptSupportingElements = 'script' | 'template';

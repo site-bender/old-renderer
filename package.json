@@ -19,8 +19,8 @@
 	"scripts": {
 		"build": "stencil build --docs",
 		"generate": "stencil generate",
-    "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix",
-		"start": "stencil build --dev --watch --serve",
+		"lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix",
+		"start": "stencil build --dev --watch --serve --port 3666",
 		"test": "stencil test --spec --e2e",
 		"test.watch": "stencil test --spec --e2e --watchAll"
 	},
@@ -30,6 +30,7 @@
 		"@formatjs/intl-listformat": "^6.3.6",
 		"@formatjs/intl-locale": "^2.4.41",
 		"@js-temporal/polyfill": "^0.3.0",
+		"@stencil/store": "^1.5.0",
 		"@xstate/fsm": "^1.6.2",
 		"cross-fetch": "^3.1.4",
 		"nanoid": "^3.1.30",

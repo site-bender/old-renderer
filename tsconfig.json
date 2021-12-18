@@ -17,7 +17,8 @@
 		"src",
 		"./stencil.config.ts",
 		"./prerender.config.ts",
-		"./.eslintrc.js"
-, "temp/utilities", "temp/components-example"	],
+		"./.eslintrc.js",
+		"temp/*"
+	],
 	"exclude": ["node_modules"]
 }
