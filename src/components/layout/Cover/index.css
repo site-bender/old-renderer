@@ -1,0 +1,24 @@
+.cover-bender {
+	display: flex;
+	flex-direction: column;
+	min-height: var(--cover-min-height, 100vh);
+	padding: var(--cover-padding, 0);
+}
+
+.cover-bender > * {
+	margin-top: var(--cover-inset, 2rem);
+	margin-bottom: var(--cover-inset, 2rem);
+}
+
+.cover-bender > :first-child:not(var(--centered-item)) {
+	margin-top: 0;
+}
+
+.cover-bender > :last-child:not(var(--centered-item)) {
+	margin-bottom: 0;
+}
+
+.cover-bender > .centered {
+	margin-top: auto;
+	margin-bottom: auto;
+}

@@ -1,0 +1,31 @@
+.stack-bender {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.stack-bender > * {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.stack-bender > * + * {
+	margin-top: var(--stack-gap, 1rem);
+}
+
+.stack-bender.nested * {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.stack-bender.nested * + * {
+	margin-top: var(--stack-gap, 1rem);
+}
+
+.stack-bender:only-child {
+	height: 100%;
+}
+
+.stack-bender.split > :nth-child(var(--stack-split-index)) {
+	margin-bottom: auto;
+}

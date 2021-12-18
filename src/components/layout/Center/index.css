@@ -1,0 +1,12 @@
+.center-bender {
+	box-sizing: content-box;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	max-width: var(--measure);
+	padding-left: var(--center-gutter, 0);
+	padding-right: var(--center-gutter, 0);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}

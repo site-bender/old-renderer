@@ -1,0 +1,326 @@
+@import url(./reset.css);
+@import url(./theme.css);
+
+/* * {
+	max-width: var(--measure);
+} */
+
+article,
+aside,
+body,
+div,
+footer,
+header,
+html,
+main,
+nav,
+section {
+	max-width: none;
+}
+
+.max-width\:measure {
+	max-width: var(--measure);
+}
+
+.max-width\:measure\/2 {
+	max-width: calc(var(--measure) / 2);
+}
+
+p,
+p * {
+	font-variant-numeric: proportional-nums oldstyle-nums;
+}
+
+p {
+	font-size: 1rem;
+	line-height: 1.5rem;
+	padding: 0;
+	margin: 0 0 1.5rem;
+}
+
+table {
+	font-variant-numeric:stacked-fractions lining-nums tabular-nums slashed-zero;
+	font-variant-ligatures: common-ligatures;
+	font-variant-caps: normal;
+	font-variant-alternates: normal;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	min-height: 100vh;
+	overflow: auto;
+	margin: 2rem;
+}
+
+hr {
+	border: none;
+	border-top: 3px double #333;
+	color: #333;
+	overflow: visible;
+	text-align: center;
+	height: 5px;
+}
+
+hr:after {
+	background: #fff;
+	content: '§';
+	padding: 0 4px;
+	position: relative;
+	top: -13px;
+}
+
+del::before,
+del::after {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+del::before {
+  content: " [begin deletion] ";
+}
+
+del::after {
+  content: " [end deletion] ";
+}
+
+ins {
+	text-decoration: overline;
+}
+
+ins::before,
+ins::after {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+ins::before {
+  content: " [begin insertion] ";
+}
+
+ins::after {
+  content: " [end insertion] ";
+}
+
+.keyboard-input-bender {
+	color: var(--sky);
+}
+
+.key-combo-bender kbd {
+	background-color: hsl(208, 100%, 98%);
+  border-radius: 3px;
+	color: darkslategray;
+	display: inline-block;
+	font-size: 0.7rem;
+	font-weight: bold;
+  padding: 0 4px 0;
+	margin: 0 2px;
+  border: 1px solid hsl(0, 0%, 70%);
+}
+
+mark::before,
+mark::after {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+mark::before {
+  content: " [begin highlight] ";
+}
+
+mark::after {
+  content: " [end highlight] ";
+}
+
+sup, sub {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+}
+
+sub {
+  top: 0.4em;
+	font-style: italic;
+	font-weight: normal;
+}
+
+var.variable-bender {
+	font-family: monospace;
+	font-style: normal;
+	color: brown;
+}
+
+/* field-wrapper-sb > *:first-child > *:first-child {
+	padding: 3rem 0 0;
+}
+
+field-wrapper-sb > *:last-child {
+	margin: 0 0 3rem;
+}
+
+label-sb > label.above,
+label-sb > label.below {
+	display: block;
+}
+
+help-message-sb {
+	color: gray;
+	font-size: 0.8rem;
+	line-height: 2;
+} */
+
+.fine-print-bender {
+	display: block;
+	font-size: calc(1rem / var(--ratio));
+	font-variant-numeric: oldstyle-nums proportional-nums;
+	line-height: 1.5rem;
+	padding: 0;
+	margin: 0 0 1.5rem;
+}
+
+.foreign-term-bender {
+	font-style: italic;
+}
+
+
+.h1-bender {
+	color: var(--h1-color, var(--sunflower));
+	font-family: var(--serif);
+	font-size: var(--h1-font-size, 2.44140625rem);
+	font-weight: normal;
+	margin: 0;
+	padding: var(--h1-padding, 2.5rem 0 0.5rem);
+}
+
+.h2-bender {
+	color: var(--h2-color, var(--sunflower));
+	font-family: var(--serif);
+	font-size: var(--h2-font-size, 1.953125rem);
+	font-weight: normal;
+	margin: 0;
+	padding: var(--h2-padding, 2.5rem 0 0.5rem);
+}
+
+.h3-bender {
+	color: var(--h3-color, var(--sunflower));
+	font-family: var(--serif);
+	font-size: var(--h3-font-size, 1.5625rem);
+	font-weight: normal;
+	margin: 0;
+	padding: var(--h3-padding, 1.5rem 0 0);
+}
+
+.h4-bender {
+	color: var(--h4-color, var(--sunflower));
+	font-family: var(--serif);
+	font-size: var(--h4-font-size, 1.25rem);
+	font-weight: normal;
+	margin: 0;
+	padding: var(--h4-padding, 1.5rem 0 0);
+}
+
+.h5-bender {
+	color: var(--h5-color, var(--sunflower));
+	font-family: var(--sans-serif);
+	font-size: var(--h5-font-size, 1rem);
+	font-weight: normal;
+	margin: 0;
+	padding: var(--h5-padding, 1.5rem 0 0);
+}
+
+.h6-bender {
+	color: var(--h6-color, var(--sunflower));
+	font-family: var(--sans-serif);
+	font-size: var(--h6-font-size, );
+	font-variant-caps: all-small-caps;
+	font-weight: normal;
+	margin: 0;
+	padding: var(--h6-padding, 1.5rem 0 0);
+}
+
+.largest-bender {
+	color: var(--h0-color, var(--sunflower));
+	font-family: var(--serif);
+	font-size: var(--h0-font-size, 3.0517578125rem);
+	font-variant-caps: normal;
+	font-weight: normal;
+	margin: 0 0 0 -0.1em;
+	padding: var(--h0-padding, 2rem 0 1rem);
+}
+
+.larger-bender {
+	color: var(--h1-color, var(--sunflower));
+	font-family: var(--serif);
+	font-size: var(--h1-font-size, 2.44140625rem);
+	font-variant-caps: normal;
+	font-weight: normal;
+	margin: 0 0 0 -0.1em;
+	padding: var(--h1-padding, 2rem 0 1rem);
+}
+
+.large-bender {
+	color: var(--h2-color, var(--sunflower));
+	font-family: var(--serif);
+	font-size: var(--h2-font-size, 1.953125rem);
+	font-variant-caps: normal;
+	font-weight: normal;
+	margin: 0 0 0 -0.1em;
+	padding: var(--h2-padding, 2rem 0 1rem);
+}
+
+.medium-bender {
+	color: var(--h3-color, var(--sunflower));
+	font-family: var(--serif);
+	font-size: var(--h3-font-size, 1.5625rem);
+	font-variant-caps: normal;
+	font-weight: normal;
+	margin: 0 0 0 -0.1em;
+	padding: var(--h3-padding, 1rem 0 0.5rem);
+}
+
+.small-bender {
+	color: var(--h4-color, var(--sunflower));
+	font-family: var(--serif);
+	font-size: var(--h4-font-size, 1.25rem);
+	font-variant-caps: normal;
+	font-weight: normal;
+	margin: 0 0 0 -0.065em;
+	padding: var(--h4-padding, 1rem 0 0.5rem);
+}
+
+.smaller-bender {
+	color: var(--h5-color, var(--sunflower));
+	font-family: var(--sans-serif);
+	font-size: var(--h5-font-size, 1rem);
+	font-variant-caps: normal;
+	font-weight: normal;
+	margin: 0 0 0 -0.05em;
+	padding: var(--h5-padding, 1rem 0 0.5rem);
+}
+
+.smallest-bender {
+	color: var(--h6-color, var(--sunflower));
+	font-family: var(--sans-serif);
+	font-size: var(--h6-font-size, );
+	font-variant-caps: all-small-caps;
+	font-weight: normal;
+	margin: 0 0 0 -0.05em;
+	padding: var(--h6-padding, 0);
+}

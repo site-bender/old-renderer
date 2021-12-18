@@ -1,0 +1,66 @@
+{
+	"name": "@sitebender/components",
+	"version": "0.0.1",
+	"description": "Web component JSON-configuration-based UI components library for Sitebender",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ionic-team/stencil-component-starter.git"
+	},
+	"license": "MIT",
+	"author": "Charles F. Munat <charles.munat@gmail.com>",
+	"main": "dist/index.cjs.js",
+	"unpkg": "dist/components/components.esm.js",
+	"module": "dist/index.js",
+	"types": "dist/types/components.d.ts",
+	"files": [
+		"dist/",
+		"loader/"
+	],
+	"scripts": {
+		"build": "stencil build --docs",
+		"generate": "stencil generate",
+    "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix",
+		"start": "stencil build --dev --watch --serve",
+		"test": "stencil test --spec --e2e",
+		"test.watch": "stencil test --spec --e2e --watchAll"
+	},
+	"dependencies": {
+		"@fluentui/svg-icons": "^1.1.154",
+		"@formatjs/intl-getcanonicallocales": "^1.8.0",
+		"@formatjs/intl-listformat": "^6.3.6",
+		"@formatjs/intl-locale": "^2.4.41",
+		"@js-temporal/polyfill": "^0.3.0",
+		"@xstate/fsm": "^1.6.2",
+		"cross-fetch": "^3.1.4",
+		"nanoid": "^3.1.30",
+		"xstate": "^4.26.1"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.16.5",
+		"@stencil/core": "^2.12.0",
+		"@stencil/helmet": "^0.3.2",
+		"@types/jest": "^27.0.3",
+		"@typescript-eslint/eslint-plugin": "^5.7.0",
+		"@typescript-eslint/parser": "^5.7.0",
+		"babel-loader": "^8.2.3",
+		"eslint": "^8.5.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-import-resolver-typescript": "^2.5.0",
+		"eslint-plugin-import": "^2.25.3",
+		"eslint-plugin-jsx-a11y": "^6.5.1",
+		"eslint-plugin-prettier": "^4.0.0",
+		"husky": "^7.0.4",
+		"jest": "^27.4.5",
+		"jest-cli": "^27.4.5",
+		"lint-staged": "^12.1.2",
+		"npm-run-all": "^4.1.5",
+		"prettier": "^2.5.1",
+		"prettier-eslint": "^13.0.0",
+		"puppeteer": "^13.0.0",
+		"typescript": "^4.5.4"
+	},
+	"collection": "dist/collection/collection-manifest.json",
+	"collection:main": "dist/collection/index.js",
+	"es2015": "dist/esm/index.mjs",
+	"es2017": "dist/esm/index.mjs"
+}

@@ -1,0 +1,23 @@
+{
+	"compilerOptions": {
+		"allowSyntheticDefaultImports": true,
+		"allowUnreachableCode": false,
+		"declaration": false,
+		"experimentalDecorators": true,
+		"lib": ["dom", "es2017"],
+		"moduleResolution": "node",
+		"module": "esnext",
+		"target": "es2017",
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"jsx": "react",
+		"jsxFactory": "h"
+	},
+	"include": [
+		"src",
+		"./stencil.config.ts",
+		"./prerender.config.ts",
+		"./.eslintrc.js"
+, "temp/utilities", "temp/components-example"	],
+	"exclude": ["node_modules"]
+}

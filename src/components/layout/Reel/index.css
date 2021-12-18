@@ -1,0 +1,46 @@
+.reel-bender {
+	display: flex;
+	height: var(--reel-height, auto);
+	overflow-x: auto;
+	overflow-y: hidden;
+	scrollbar-color: var(--reel-thumb-color, var(--color-light))
+		var(--reel-track-color, var(--color-dark));
+}
+
+.reel-bender::-webkit-scrollbar {
+	height: var(--reel-height, 1rem);
+	display: var(--reel-scrollbar-display, block);
+}
+
+.reel-bender::-webkit-scrollbar-track {
+	background-color: var(--reel-track-color, var(--color-dark));
+}
+
+.reel-bender::-webkit-scrollbar-thumb {
+	background-color: var(--reel-track-color);
+	background-image: linear-gradient(
+		var(--reel-track-color, var(--color-dark)) 0,
+		var(--reel-track-color, var(--color-dark)) 0.25rem,
+		var(--reel-thumb-color, var(--color-light)) 0.25rem,
+		var(--reel-thumb-color, var(--color-light)) 0.75rem,
+		var(--reel-track-color, var(--color-dark)) 0.75rem
+	);
+}
+
+.reel-bender > * {
+	flex: 0 0 var(--reel-item-width, auto);
+}
+
+.reel-bender > img {
+	height: 100%;
+	flex-basis: auto;
+	width: auto;
+}
+
+.reel-bender > * + * {
+	margin-left: var(--reel-gap, 1rem);
+}
+
+.reel-bender.overflowing {
+	padding-bottom: var(--reel-gap, 1rem);
+}

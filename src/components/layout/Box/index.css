@@ -1,0 +1,15 @@
+.box-bender {
+	background-color: var(--box-background-color);
+	border: var(--box-border) solid;
+	color: var(--box-color);
+	padding: var(--box-padding);
+}
+
+.box-bender * {
+	color: inherit;
+}
+
+.box-bender.invert-sb {
+	background-color: var(--box-color);
+	color: var(--box-background-color);
+}

@@ -1,0 +1,17 @@
+.topper-bender {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.topper-bender.contain {
+  --margin: var(--topper-margin, 0);
+  overflow: auto;
+  max-width: calc(100% - (var(--margin) * 2));
+  max-height: calc(100% - (var(--margin) * 2));
+}
+
+.topper-bender.fixed {
+  position: fixed;
+}

@@ -1,0 +1,15 @@
+.switcher-bender {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--switcher-gap, var(--s1));
+}
+
+.switcher-bender > * {
+	flex-grow: 1;
+	flex-basis: calc((var(--switcher-threshold, 30rem) - 100%) * 999);
+}
+
+.switcher-bender > :nth-last-child(n + calc(var(--switcher-row-limit, 4) + 1)),
+.switcher-bender > :nth-last-child(n + calc(var(--switcher-row-limit, 4) + 1)) ~ * {
+	flex-basis: 100%;
+}

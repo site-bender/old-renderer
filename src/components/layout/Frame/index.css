@@ -1,0 +1,25 @@
+.frame-bender {
+  --n: var(--frame-relative-height, 9);
+  --d: var(--frame-relative-width, 16);
+  padding-bottom: calc(var(--n) / var(--d) * 100%);
+  position: relative;
+}
+
+.frame-bender > * {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.frame-bender > img,
+.frame-bender > video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

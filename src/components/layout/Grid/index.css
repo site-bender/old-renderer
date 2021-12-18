@@ -1,0 +1,13 @@
+.grid-bender {
+	display: grid;
+	grid-gap: var(--grid-gap, 1rem);
+}
+
+@supports (width: min(var(--grid-cell-width), 100%)) {
+	.grid-bender {
+		grid-template-columns: repeat(
+			auto-fit,
+			minmax(min(var(--grid-cell-width), 100%), 1fr)
+		);
+	}
+}
